@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-sm-10 col-md-4">
       <div class="card mt-5">
-        <div class="card-header">
+        <div class="card-header bg-primary text-light">
           Register Here!
         </div>
         <div class="card-body">
@@ -15,12 +15,14 @@
           <label for="password" class="form-label">Password:</label>
           <div class="input-group mb-3">
             <input type="password" class="form-control" id="password" placeholder="password" autocomplete="off">
-            <button class="btn btn-outline-secondary" type="button" id="password" data-bs-toggle="tooltip" data-bs-placement="bottom" title="See password"><i class="bi bi-eye-slash-fill" ></i></button>
           </div>
-          <label for="password" class="form-label">Confirm Password:</label>
+          <label for="confirmPassword" class="form-label">Confirm Password:</label>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" id="password" placeholder="password" autocomplete="off">
-            <button class="btn btn-outline-secondary" type="button" id="password" data-bs-toggle="tooltip" data-bs-placement="bottom" title="See password"><i class="bi bi-eye-slash-fill" ></i></button>
+            <input [type]="show ? 'text' : 'password'"  class="form-control" id="password" placeholder="password" autocomplete="off">
+            <button class="btn btn-outline-secondary" type="button" id="confirmPassword"  (click)="password()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="See password">
+              <i *ngIf="!show" class="bi bi-eye-slash-fill" ></i>
+              <i *ngIf="show" class="bi bi-eye-fill" ></i>
+              </button>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Login with: </label>
