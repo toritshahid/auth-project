@@ -1,0 +1,21 @@
+
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-sm-10 col-md-4  offset-1">
+      <div class="card mt-5">
+        <div class="card-header">
+          Enter one time Password
+        </div>
+        <div class="card-body text-center">
+
+            <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:6}"></ng-otp-input>
+
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-outline-primary col-8 " routerLink="/register">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
